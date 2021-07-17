@@ -1,0 +1,17 @@
+
+search_feat:
+  dense:
+    - id1
+    - id2
+    - id3
+  sparse:
+    - uid4
+
+feat_size:
+  id2: 12
+
+recommend_feat:
+  dense:
+    - id3
+  sparse:
+    - id4
