@@ -6,6 +6,7 @@ import tensorflow as tf
 import tensorflow as tf
 from tensorflow.keras.utils import get_file
 from tensorflow.keras.layers import Embedding, Concatenate, Dense,Input
+from tensorflow.keras.models import Model
 
 a = tf.constant([[1, 2], [3, 4], [5, 6]], dtype=tf.float32)
 a1 = tf.tile(a, [2, 3])
@@ -30,4 +31,6 @@ print(res1)
 print(res2)
 input = Input(shape=[1])
 res3 = Dense(1, activation=None, use_bias=True)(input)
+d = Model(input, res3)
 print('---res3',res)
+d.get_layer()
